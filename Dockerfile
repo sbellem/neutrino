@@ -1,5 +1,6 @@
-FROM ubuntu:15.04
+FROM jupyter/notebook
 MAINTAINER Sylvain Bellemare <sbellem@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y python3.4-dev
+EXPOSE 8888
+
+CMD jupyter notebook --ip=0.0.0.0 --no-browser
